@@ -1,0 +1,20 @@
+1;Item 1;1001;10.99;true;1;3-5 anos;Brinquedos educativos;Fisher-Price;Blocos de construção;B
+2;Item 1;1001;10.99;true;1;6-8 anos;Brinquedos de ação;LEGO;Super-heróis;B
+3;Item 1;1001;10.99;true;1;2-4 anos;Brinquedos de pelúcia;Disney;Animais de pelúcia;B
+4;Item 1;1001;10.99;true;1;5-7 anos;Brinquedos de quebra-cabeça;Ravensburger;Quebra-cabeças de paisagens;B
+5;Item 1;1001;10.99;true;1;8-10 anos;Brinquedos de construção;Playmobil;Cidades e veículos;B
+6;Item 1;1001;10.99;true;1;3-5 anos;Brinquedos de esportes;NERF;Futebol de espuma;B
+7;Item 1;1001;10.99;true;1;4-6 anos;Brinquedos de arte e criatividade;Crayola;Kit de pintura;B
+8;Item 1;1001;10.99;true;1;6-8 anos;Brinquedos eletrônicos;Hasbro;Jogos de tabuleiro;B
+9;Item 1;1001;10.99;true;1;1-3 anos;Brinquedos musicais;Vtech;Teclado de brinquedo;B
+10;Item 1;1001;10.99;true;1;9-12 anos;Brinquedos de tecnologia;Osmo;Kit de aprendizado STEM;B
+1;Item 1;1001;10.99;true;1;Livro 1;Autor 1;Editora A;300;L
+2;Item 1;1001;10.99;true;1;Livro 2;Autor 2;Editora B;250;L
+3;Item 1;1001;10.99;true;1;Livro 3;Autor 3;Editora C;400;L
+4;Item 1;1001;10.99;true;1;Livro 4;Autor 4;Editora D;350;L
+5;Item 1;1001;10.99;true;1;Livro 5;Autor 5;Editora E;280;L
+6;Item 1;1001;10.99;true;1;Livro 6;Autor 6;Editora F;320;L
+7;Item 1;1001;10.99;true;1;Livro 7;Autor 7;Editora G;420;L
+8;Item 1;1001;10.99;true;1;Livro 8;Autor 8;Editora H;270;L
+9;Item 1;1001;10.99;true;1;Livro 9;Autor 9;Editora I;310;L
+10;Item 1;1001;10.99;true;1;Livro 10;Autor 10;Editora J;380;L

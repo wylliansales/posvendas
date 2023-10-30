@@ -1,0 +1,10 @@
+1;Item 1;1001;10.99;true;1;3-5 anos;Brinquedos educativos;Fisher-Price;Blocos de construção
+2;Item 1;1001;10.99;true;1;6-8 anos;Brinquedos de ação;LEGO;Super-heróis
+3;Item 1;1001;10.99;true;1;2-4 anos;Brinquedos de pelúcia;Disney;Animais de pelúcia
+4;Item 1;1001;10.99;true;1;5-7 anos;Brinquedos de quebra-cabeça;Ravensburger;Quebra-cabeças de paisagens
+5;Item 1;1001;10.99;true;1;8-10 anos;Brinquedos de construção;Playmobil;Cidades e veículos
+6;Item 1;1001;10.99;true;1;3-5 anos;Brinquedos de esportes;NERF;Futebol de espuma
+7;Item 1;1001;10.99;true;1;4-6 anos;Brinquedos de arte e criatividade;Crayola;Kit de pintura
+8;Item 1;1001;10.99;true;1;6-8 anos;Brinquedos eletrônicos;Hasbro;Jogos de tabuleiro
+9;Item 1;1001;10.99;true;1;1-3 anos;Brinquedos musicais;Vtech;Teclado de brinquedo
+10;Item 1;1001;10.99;true;1;9-12 anos;Brinquedos de tecnologia;Osmo;Kit de aprendizado STEM

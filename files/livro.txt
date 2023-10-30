@@ -1,0 +1,10 @@
+1;Item 1;1001;10.99;true;1;Livro 1;Autor 1;Editora A;300;2020
+2;Item 1;1001;10.99;true;1;Livro 2;Autor 2;Editora B;250;2019
+3;Item 1;1001;10.99;true;1;Livro 3;Autor 3;Editora C;400;2021
+4;Item 1;1001;10.99;true;1;Livro 4;Autor 4;Editora D;350;2018
+5;Item 1;1001;10.99;true;1;Livro 5;Autor 5;Editora E;280;2017
+6;Item 1;1001;10.99;true;1;Livro 6;Autor 6;Editora F;320;2016
+7;Item 1;1001;10.99;true;1;Livro 7;Autor 7;Editora G;420;2022
+8;Item 1;1001;10.99;true;1;Livro 8;Autor 8;Editora H;270;2015
+9;Item 1;1001;10.99;true;1;Livro 9;Autor 9;Editora I;310;2014
+10;Item 1;1001;10.99;true;1;Livro 10;Autor 10;Editora J;380;2023

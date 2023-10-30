@@ -10,7 +10,11 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import com.example.posvendas.posvenda.model.domain.Brinquedo;
+import com.example.posvendas.posvenda.model.domain.Vendedor;
 import com.example.posvendas.posvenda.model.services.BrinquedoService;
+
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Order(3)
 @Component
@@ -35,16 +39,21 @@ public class BrinquedoLoader implements ApplicationRunner{
 			
 			Brinquedo brinquedo = new Brinquedo();
 
-			brinquedo.setCodigo(Integer.valueOf(campos[0]));
-            brinquedo.setCodigo(Integer.valueOf(campos[0]));
-            brinquedo.setDescricao(campos[1]);
-            brinquedo.setEstoque(Boolean.valueOf(campos[2]));
+			brinquedo.setId(Integer.valueOf(campos[0]));
+			brinquedo.setDescricao(campos[1]);
+            brinquedo.setCodigo(Integer.valueOf(campos[2]));
             brinquedo.setPreco(Float.valueOf(campos[3]));
-            brinquedo.setIdadeRecomendada(Integer.valueOf(campos[4]));
-            brinquedo.setGenero(campos[5]);
-            brinquedo.setMarca(campos[6]);
-            brinquedo.setTipoDeBrinquedo(campos[7]);
-			
+            brinquedo.setEstoque(Boolean.valueOf(campos[4]));
+            
+            brinquedo.setIdadeRecomendada(campos[6]);
+            brinquedo.setGenero(campos[7]);
+            brinquedo.setMarca(campos[8]);
+            brinquedo.setTipoDeBrinquedo(campos[9]);
+
+			Vendedor vendedor = new Vendedor();
+			vendedor.setId(Integer.valueOf(campos[5]));
+			brinquedo.setVendedor(vendedor);
+
 			brinquedoService.incluir(brinquedo);
 			
 			linha = leitura.readLine();

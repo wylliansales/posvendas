@@ -1,11 +1,15 @@
 package com.example.posvendas.posvenda.model.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "TLivro")
 public class Livro extends Produto{
     private String titulo;
     private String autor;
     private String editora;
     private int numeroDePaginas;
-    private int anoDePublicacao;
 
     public String getTitulo() {
         return this.titulo;
@@ -38,13 +42,4 @@ public class Livro extends Produto{
     public void setNumeroDePaginas(int numeroDePaginas) {
         this.numeroDePaginas = numeroDePaginas;
     }
-
-    public int getAnoDePublicacao() {
-        return this.anoDePublicacao;
-    }
-
-    public void setAnoDePublicacao(int anoDePublicacao) {
-        this.anoDePublicacao = anoDePublicacao;
-    }
-
 }

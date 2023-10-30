@@ -1,16 +1,26 @@
 package com.example.posvendas.posvenda.model.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "TBrinquedo")
 public class Brinquedo extends Produto{
-    private int idadeRecomendada;
+    private String idadeRecomendada;
     private String genero;
     private String marca;
     private String tipoDeBrinquedo;
 
-    public int getIdadeRecomendada() {
+    @Override
+    public String toString() {
+        return String.format("%s - %s - %s - %s - %s", super.toString(), idadeRecomendada, genero, marca, tipoDeBrinquedo);
+    }
+
+    public String getIdadeRecomendada() {
         return this.idadeRecomendada;
     }
 
-    public void setIdadeRecomendada(int idadeRecomendada) {
+    public void setIdadeRecomendada(String idadeRecomendada) {
         this.idadeRecomendada = idadeRecomendada;
     }
 
