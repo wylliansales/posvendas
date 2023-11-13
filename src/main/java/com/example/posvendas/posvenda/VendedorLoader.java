@@ -9,6 +9,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import com.example.posvendas.posvenda.model.domain.Endereco;
 import com.example.posvendas.posvenda.model.domain.Vendedor;
 import com.example.posvendas.posvenda.model.services.VendedorService;
 
@@ -33,15 +34,20 @@ public class VendedorLoader implements ApplicationRunner {
 		while(linha != null) {
 			
 			campos = linha.split(";");
-			
+
 			Vendedor vendedor = new Vendedor();
 			
 			vendedor.setId(Integer.parseInt(campos[0]));
 			vendedor.setNome(campos[1]);
 			vendedor.setCpf(campos[2]);
 			vendedor.setEmail(campos[3]);
+			vendedor.setEndereco(new Endereco(campos[4]));
 			
-			vendedorService.incluir(vendedor);
+			try {
+				vendedorService.incluir(vendedor);
+			} catch (Exception e) {
+				FileLogger.logException("[VENDEDOR]" + vendedor + " - " + e.getMessage());
+			}
 									
 			linha = leitura.readLine();
 		}

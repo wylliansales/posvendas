@@ -9,6 +9,7 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
 @Table(name = "TProduto")
@@ -19,6 +20,7 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String descricao;
+	@PositiveOrZero
 	private int codigo;
 	private float preco;
 	private boolean estoque;	

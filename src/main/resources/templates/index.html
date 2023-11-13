@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Barra de Navegação</title>
+    <!-- Inclua os arquivos de CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">App Venda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vendedores">Vendedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clientes">Clientes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da Página -->
+    <div class="container mt-4">
+        <section id="vendedores">
+            <h2>Vendedores</h2>
+            <!-- Botão para abrir o modal de cadastro de vendedor -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#cadastroVendedorModal">
+                Cadastrar Vendedor
+            </button>
+            <!-- Tabela de Vendedores -->
+            <table class="table">
+                <!-- Cabeçalho da Tabela -->
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Email</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <!-- Dados dos Vendedores -->
+                <tbody>
+                    <tr th:each="vendedor: ${vendedores}">
+                        <td th:text="${{vendedor.id}}"/>                      
+                        <td th:text="${{vendedor.nome}}"/>                      
+                        <td th:text="${{vendedor.cpf}}"/>                      
+                        <td th:text="${{vendedor.email}}"/>
+                        <td>
+                            <button type="button" class="btn btn-danger">Excluir</button>
+                        </td>                      
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="brinquedos">
+            <h2>Brinquedos</h2>
+            <!-- Botão para abrir o modal de cadastro de produto -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroProdutoModal">
+                Cadastrar Brinquedo
+            </button>
+            <!-- Tabela de Produtos -->
+            <table class="table">
+                <!-- Cabeçalho da Tabela -->
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Código</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                        <th>Idade Recomendada</th>
+                        <th>Gênero</th>
+                        <th>Marca</th>
+                        <th>Tipo de Brinquedo</th>
+                    </tr>
+                </thead>
+                <!-- Dados dos Produtos -->
+                <tbody>
+                    <tr th:each="brinquedo: ${brinquedos}">
+                        <td th:text="${{brinquedo.id}}" />
+                        <td th:text="${{brinquedo.descricao}}" />
+                        <td th:text="${{brinquedo.codigo}}" />
+                        <td th:text="${{brinquedo.preco}}" />
+                        <td th:text="${{brinquedo.estoque}}" />
+                        <td th:text="${{brinquedo.idadeRecomendada}}" />
+                        <td th:text="${{brinquedo.genero}}" />
+                        <td th:text="${{brinquedo.marca}}" />
+                        <td th:text="${{brinquedo.tipoDeBrinquedo}}" />
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+            <section id="livros">
+                <h2>Livros</h2>
+                <!-- Botão para abrir o modal de cadastro de produto -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastroProdutoModal">
+                    Cadastrar Livro
+                </button>
+                <!-- Tabela de Produtos -->
+                <table class="table">
+                    <!-- Cabeçalho da Tabela -->
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Descrição</th>
+                            <th>Código</th>
+                            <th>Preço</th>
+                            <th>Estoque</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Editora</th>
+                            <th>Número de Pag.</th>
+                        </tr>
+                    </thead>
+                    <!-- Dados dos Produtos -->
+                    <tbody>
+                        <tr th:each="livro: ${livros}">
+                            <td th:text="${{livro.id}}" />
+                            <td th:text="${{livro.descricao}}" />
+                            <td th:text="${{livro.codigo}}" />
+                            <td th:text="${{livro.preco}}" />
+                            <td th:text="${{livro.estoque}}" />
+                            <td th:text="${{livro.titulo}}" />
+                            <td th:text="${{livro.autor}}" />
+                            <td th:text="${{livro.editora}}" />
+                            <td th:text="${{livro.numeroDePaginas}}" />
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    </div>
+
+ 
+    <!-- Modal de Cadastro de Vendedor -->
+    <div class="modal fade" id="cadastroVendedorModal" tabindex="-1" aria-labelledby="cadastroVendedorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroVendedorModalLabel">Cadastro de Vendedor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulário de Cadastro de Vendedor -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="nomeVendedor" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nomeVendedor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpfVendedor" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpfVendedor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailVendedor" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailVendedor" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar Vendedor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro de Produto -->
+    <div class="modal fade" id="cadastroProdutoModal" tabindex="-1" aria-labelledby="cadastroProdutoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroProdutoModalLabel">Cadastro de Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulário de Cadastro de Produto -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="descricaoProduto" class="form-label">Descrição</label>
+                            <input type="text" class="form-control" id="descricaoProduto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="codigoProduto" class="form-label">Código</label>
+                            <input type="text" class="form-control" id="codigoProduto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="precoProduto" class="form-label">Preço</label>
+                            <input type="text" class="form-control" id="precoProduto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="estoqueProduto" class="form-label">Estoque</label>
+                            <input type="text" class="form-control" id="estoqueProduto" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar Produto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclua os arquivos de JavaScript do Bootstrap no final do corpo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

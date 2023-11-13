@@ -18,7 +18,11 @@ public class VendedorService {
 		vendedorRepository.save(vendedor);
 	}
 	
-	public Collection<Vendedor> obterLista(){	
+	public Collection<Vendedor> obterLista() {
 		return (Collection<Vendedor>) vendedorRepository.findAll();
+	}
+	
+	public void excluir(Integer id) {
+		vendedorRepository.deleteById(id);
 	}
 }
