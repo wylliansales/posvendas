@@ -29,11 +29,11 @@ public class Vendedor {
 	@Column(unique = true)
 	private String cpf;
 	@Size(min = 2, max = 50)
+	@Column(unique = true)
 	private String email;
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
 	@JoinColumn(name = "idVendedor")
 	private List<Produto> produtos;
-
 	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "idEndereco")
 	private Endereco endereco;

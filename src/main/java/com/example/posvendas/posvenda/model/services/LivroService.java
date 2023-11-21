@@ -18,7 +18,11 @@ public class LivroService {
 		livroRepository.save(livro);
 	}
 	
-	public Collection<Livro> obterLista(){	
+	public Collection<Livro> obterLista() {
 		return (Collection<Livro>) livroRepository.findAll();
+	}
+	
+	public long obterQtde() {
+		return livroRepository.count();
 	}
 }

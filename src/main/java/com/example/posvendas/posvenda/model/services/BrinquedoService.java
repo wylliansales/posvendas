@@ -21,4 +21,8 @@ public class BrinquedoService {
 	public Collection<Brinquedo> obterLista(){	
 		return (Collection<Brinquedo>) brinquedoRepository.findAll();
 	}
+
+	public long obterQtde() {
+		return brinquedoRepository.count();
+	}
 }

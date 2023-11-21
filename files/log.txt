@@ -1,0 +1,8 @@
+nov. 20, 2023 9:41:46 PM com.example.posvendas.posvenda.FileLogger logException
+SEVERE: [VENDEDOR]id (1) - nome (Elberth Moraes) - cpf (123.123.123-12) - email (elberth@moraes.com) - produtos (0) - A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.example.posvendas.posvenda.model.domain.Vendedor.produtos
+nov. 20, 2023 9:41:46 PM com.example.posvendas.posvenda.FileLogger logException
+SEVERE: [VENDEDOR]id (2) - nome (Huguinho) - cpf (456.456.456-45) - email (hugo@hugo.com) - produtos (0) - A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.example.posvendas.posvenda.model.domain.Vendedor.produtos
+nov. 20, 2023 9:41:46 PM com.example.posvendas.posvenda.FileLogger logException
+SEVERE: [VENDEDOR]id (3) - nome (Zezinho) - cpf (345.345.345-34) - email (jose@jose.com) - produtos (0) - A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.example.posvendas.posvenda.model.domain.Vendedor.produtos
+nov. 20, 2023 9:41:46 PM com.example.posvendas.posvenda.FileLogger logException
+SEVERE: [VENDEDOR]id (4) - nome (Luizinho) - cpf (234.234.234-23) - email (luiz@luiz.com) - produtos (0) - A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: com.example.posvendas.posvenda.model.domain.Vendedor.produtos

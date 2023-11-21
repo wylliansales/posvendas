@@ -9,6 +9,7 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
@@ -22,10 +23,11 @@ public class Produto {
 	private String descricao;
 	@PositiveOrZero
 	private int codigo;
+	@Positive
 	private float preco;
-	private boolean estoque;	
+	private boolean estoque;
 	@ManyToOne
-	@JoinColumn(name="idVendedor")
+	@JoinColumn(name = "idVendedor")
 	private Vendedor vendedor;
 	
 	@Override

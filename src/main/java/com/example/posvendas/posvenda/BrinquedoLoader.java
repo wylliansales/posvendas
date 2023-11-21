@@ -13,8 +13,6 @@ import com.example.posvendas.posvenda.model.domain.Brinquedo;
 import com.example.posvendas.posvenda.model.domain.Vendedor;
 import com.example.posvendas.posvenda.model.services.BrinquedoService;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 @Order(3)
 @Component

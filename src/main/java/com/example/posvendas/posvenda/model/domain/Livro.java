@@ -2,10 +2,13 @@ package com.example.posvendas.posvenda.model.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "TLivro")
-public class Livro extends Produto{
+public class Livro extends Produto {
+    
+    @Size(min = 2, max = 100, message = "O titulo deve ter entre {min} e {max} caracteres.")
     private String titulo;
     private String autor;
     private String editora;
